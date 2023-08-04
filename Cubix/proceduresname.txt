@@ -1,0 +1,33 @@
+update  MRTeleConsultationReg set Status=@Status, ConsultationsStatus=@ConsultationsStatus, ModifiedDate=@ModifiedDate, Response=@Response, Where DoctorId=@DoctorId  and  MRTeleConsultationId=@MRTeleConsultationId 
+Incorrect syntax near the keyword 'Where'.SP_Report_MR_Appointment_Summary
+Procedure or function 'SP_Report_MR_Appointment_Summary' expects parameter '@EndDate', which was not supplied.SP_Report_MR_Appointment_Summary
+Procedure or function 'SP_Report_MR_Appointment_Summary' expects parameter '@EndDate', which was not supplied.Select *  from MasterState where status=1 and lower(StateName) = chandigarh
+Invalid column name 'chandigarh'.Select *  from MasterState where status=1 and lower(StateName) = chandigarh
+Invalid column name 'chandigarh'.Select *  from MasterDistrict where status=1 and lower(DistrictName) = chandigarh
+Invalid column name 'chandigarh'.Select *  from MasterCity where status=1 and lower(CityName) = chandigarh
+Invalid column name 'chandigarh'.Select *  from MasterState where status=1 and lower(StateName) = chandigarh
+Invalid column name 'chandigarh'.Select *  from MasterState where status=1 and lower(StateName) = chandigarh
+Invalid column name 'chandigarh'.Select *  from MasterDistrict where status=1 and lower(DistrictName) = @DistrictName
+Must declare the scalar variable "@DistrictName".Select HospitalId from HospitalReg where  lower(HospitalLicenseNumber) = HOSP12345
+Invalid column name 'HOSP12345'.Select HospitalId  from HospitalReg where  lower(OwnerMobile) = 4
+The conversion of the varchar value '6547896333' overflowed an int column.Select HospitalId  from HospitalReg where  lower(ContactMobile) = 4
+The conversion of the varchar value '5999999999' overflowed an int column.Select HospitalId from HospitalReg where  lower(HospitalName) = IVY
+Invalid column name 'IVY'.Select HospitalId from HospitalReg where  lower(HospitalLicenseNumber) = HOSP12344
+Invalid column name 'HOSP12344'.Select HospitalId  from HospitalReg where  lower(OwnerMobile) = 2
+The conversion of the varchar value '6547896333' overflowed an int column.Select HospitalId  from HospitalReg where  lower(ContactMobile) = 2
+The conversion of the varchar value '5999999999' overflowed an int column.Select HospitalId from HospitalReg where  lower(HospitalName) = Forties
+Invalid column name 'Forties'.Select HospitalId from HospitalReg where  lower(HospitalLicenseNumber) = HOSP12345
+Invalid column name 'HOSP12345'.Select HospitalId  from HospitalReg where  lower(ContactMobile) = 8699114136
+Error converting data type varchar to numeric.Select HospitalId from HospitalReg where  lower(HospitalName) = PGI
+Invalid column name 'PGI'.Select HospitalId from HospitalReg where  lower(HospitalLicenseNumber) = HOSP12345
+Invalid column name 'HOSP12345'.Select HospitalId  from HospitalReg where  lower(OwnerMobile) = 4
+The conversion of the varchar value '6547896333' overflowed an int column.Select HospitalId  from HospitalReg where  lower(ContactMobile) = 4
+The conversion of the varchar value '5999999999' overflowed an int column.Select HospitalId from HospitalReg where  lower(HospitalName) = IVY
+Invalid column name 'IVY'.Select HospitalId from HospitalReg where  lower(HospitalLicenseNumber) = HOSP12344
+Invalid column name 'HOSP12344'.Select HospitalId  from HospitalReg where  lower(OwnerMobile) = 2
+The conversion of the varchar value '6547896333' overflowed an int column.Select HospitalId  from HospitalReg where  lower(ContactMobile) = 2
+The conversion of the varchar value '5999999999' overflowed an int column.Select HospitalId from HospitalReg where  lower(HospitalName) = Forties
+Invalid column name 'Forties'.Select HospitalId from HospitalReg where  lower(HospitalLicenseNumber) = HOSP12345
+Invalid column name 'HOSP12345'.Select HospitalId  from HospitalReg where  lower(ContactMobile) = 8699114136
+Error converting data type varchar to numeric.Select HospitalId from HospitalReg where  lower(HospitalName) = PGI
+Invalid column name 'PGI'.

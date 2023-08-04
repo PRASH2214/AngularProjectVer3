@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "x2d+gcZt0Z5s4zAfYqVQpkuLH5fCYeprlBcXgldC9sQuzsezUSWQmDdMgvS4OB92G2ajzdT+zkz8D3Ttqo7GUA==",
+  "success": true,
+  "projectFilePath": "D:\\VCSDEV0053\\eConsultation\\trunk\\source\\Cubix\\Cubix.Models\\Cubix.Models.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\VCSDEV0053\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.7\\microsoft.extensions.configuration.abstractions.3.1.7.nupkg.sha512",
+    "C:\\Users\\VCSDEV0053\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.7\\microsoft.extensions.primitives.3.1.7.nupkg.sha512"
+  ],
+  "logs": []
+}

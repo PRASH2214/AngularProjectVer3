@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Cubix.DAL\Cubix.DAL.csproj" />
+    <ProjectReference Include="..\Cubix.Models\Cubix.Models.csproj" />
+    <ProjectReference Include="..\Cubix.Utility\Cubix.Utility.csproj" />
+  </ItemGroup>
+
+</Project>

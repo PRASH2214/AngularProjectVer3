@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "xS6Sk0WZ6P5Hodg1zJgAELeE+G+OUufNXViC7UfB6fv63cmIVR4vmIVcy18iZzZi1C8glCgQX/qDlfcIex2gwg==",
+  "success": true,
+  "projectFilePath": "D:\\VCSDEV0053\\eConsultation\\trunk\\source\\Cubix\\Cubix.Utility\\Cubix.Utility.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\VCSDEV0053\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\3.1.7\\microsoft.extensions.caching.abstractions.3.1.7.nupkg.sha512",
+    "C:\\Users\\VCSDEV0053\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.7\\microsoft.extensions.configuration.abstractions.3.1.7.nupkg.sha512",
+    "C:\\Users\\VCSDEV0053\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.7\\microsoft.extensions.primitives.3.1.7.nupkg.sha512",
+    "C:\\Users\\VCSDEV0053\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

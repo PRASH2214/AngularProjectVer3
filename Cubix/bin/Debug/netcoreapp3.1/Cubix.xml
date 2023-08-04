@@ -1,0 +1,1546 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Cubix</name>
+    </assembly>
+    <members>
+        <member name="T:Cubix.Controllers.Admin.AdminController">
+            <summary>
+            This class used for Get and update the Admin Profile
+            Only Authorised User can access the mehtods of this Api Controller
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.AdminController.#ctor(Cubix.BAL.Interfaces.IAdmin,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.Extensions.Caching.Distributed.IDistributedCache)">
+            <summary>
+            Admin Controller Comstructor
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.AdminController.GetProfile">
+            <summary>
+            This method used for Get the Profile
+            </summary>
+            <returns>Admin Model</returns>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.AdminController.UpdateProfile(Cubix.Models.AdminReg)">
+            <summary>
+            This method used for Update the Profile
+            </summary>
+            <returns>ResultModel with int as Model</returns>
+            
+        </member>
+        <member name="M:Cubix.Controllers.Admin.AdminController.UpdateProfileImage(Cubix.Models.FileUpload)">
+            <summary>
+            This method used for Update the Image Profile
+            </summary>
+            <returns>ResultModel with int as Model</returns>
+            
+        </member>
+        <member name="M:Cubix.Controllers.Admin.AdminController.Logout">
+            <summary>
+            This Method used to Logout
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.AdminController.GetDashBoardCounters">
+            <summary>
+            This method used for Get the Dashboard Counters
+            </summary>
+            <returns>Doctor Model</returns>
+        </member>
+        <member name="T:Cubix.Controllers.Admin.BranchController">
+            <summary>
+            This class used for Get, insert,  update, delete the Branch
+            Only Authorised User can access the mehtods of this Api Controller
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.BranchController.#ctor(Cubix.BAL.Interfaces.IBranch)">
+            <summary>
+            Branch Controller Comstructor
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.BranchController.GetAll(Cubix.Models.SearchModel)">
+            <summary>
+            This Method Get the Branch List by Search
+            Pass SearchModel as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.BranchController.Get(System.Int32)">
+            <summary>
+            This Method Get the Branch Record by Passing Branch Id
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.BranchController.Post(Cubix.Models.BranchReg)">
+            <summary>
+            This Method used to Insert the Branch record
+            Pass BranchReg as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.BranchController.Put(Cubix.Models.BranchReg)">
+            <summary>
+            This Method used to Update the Branch record
+            Pass BranchReg as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.BranchController.Delete(System.Int32)">
+            <summary>
+            This Method Delete the Branch Record by Passing Branch Id
+            </summary>
+        </member>
+        <member name="T:Cubix.Controllers.Admin.BulkController">
+            <summary>
+            This class used for Bulk Entries in 
+            Only Authorised User can access the mehtods of this Api Controller
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.BulkController.#ctor(Cubix.BAL.Interfaces.IHospital,Cubix.BAL.Interfaces.IMedicineMaster,Cubix.BAL.Interfaces.IBranch,Cubix.BAL.Interfaces.IDepartment,Cubix.BAL.Interfaces.IDoctor,Cubix.BAL.Interfaces.IMR,Cubix.BAL.Interfaces.ICompany,Cubix.BAL.Interfaces.ICommon,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            Company Controller Comstructor
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.BulkController.ValidateHospitalBulkUpload(System.Collections.Generic.List{Cubix.Models.HospitalRegUpload})">
+            <summary>
+            This Method Validated the Upload bulk hospital entries 
+            Pass List of HospitalRegUpload as Parameter
+            </summary>
+            
+        </member>
+        <member name="M:Cubix.Controllers.Admin.BulkController.SaveHospitalBulkUpload(System.Collections.Generic.List{Cubix.Models.HospitalReg})">
+            <summary>
+            This Method Save the Upload bulk hospital entries 
+            Pass List of HospitalReg as Parameter
+            </summary>
+            
+        </member>
+        <member name="M:Cubix.Controllers.Admin.BulkController.ValidateBranchBulkUpload(System.Collections.Generic.List{Cubix.Models.BranchRegUpload})">
+            <summary>
+            This Method Validated the Upload bulk Branch entries 
+            Pass List of BranchRegUploadzBranchRegUpload as Parameter
+            </summary>
+            
+        </member>
+        <member name="M:Cubix.Controllers.Admin.BulkController.SaveBranchBulkUpload(System.Collections.Generic.List{Cubix.Models.BranchReg})">
+            <summary>
+            This Method Save the Upload bulk Branch entries 
+            Pass List of BranchReg as Parameter
+            </summary>
+            
+        </member>
+        <member name="M:Cubix.Controllers.Admin.BulkController.ValidateDepartmentBulkUpload(System.Collections.Generic.List{Cubix.Models.DepartmentRegUpload})">
+            <summary>
+            This Method Validated the Upload bulk Department entries 
+            Pass List of DepartmentRegUpload as Parameter
+            </summary>
+            
+        </member>
+        <member name="M:Cubix.Controllers.Admin.BulkController.SaveDepartmentBulkUpload(System.Collections.Generic.List{Cubix.Models.DepartmentReg})">
+            <summary>
+            This Method Save the Upload bulk Department entries 
+            Pass List of DepartmentReg as Parameter
+            </summary>
+            
+        </member>
+        <member name="M:Cubix.Controllers.Admin.BulkController.ValidateDoctorBulkUpload(System.Collections.Generic.List{Cubix.Models.DoctorRegUpload})">
+            <summary>
+            This Method Validated the Upload bulk Doctor entries 
+            Pass List of DoctorRegUpload as Parameter
+            </summary>
+            
+        </member>
+        <member name="M:Cubix.Controllers.Admin.BulkController.SaveDoctorBulkUpload(System.Collections.Generic.List{Cubix.Models.DoctorReg})">
+            <summary>
+            This Method Save the Upload bulk Doctor entries 
+            Pass List of DoctorReg as Parameter
+            </summary>
+            
+        </member>
+        <member name="M:Cubix.Controllers.Admin.BulkController.ValidateMRBulkUpload(System.Collections.Generic.List{Cubix.Models.MRRegUpload})">
+            <summary>
+            This Method Validated the Upload bulk Doctor entries 
+            Pass List of DoctorRegUpload as Parameter
+            </summary>
+            
+        </member>
+        <member name="M:Cubix.Controllers.Admin.BulkController.SaveMRBulkUpload(System.Collections.Generic.List{Cubix.Models.MRReg})">
+            <summary>
+            This Method Save the Upload bulk MR entries 
+            Pass List of MRReg as Parameter
+            </summary>
+            
+        </member>
+        <member name="M:Cubix.Controllers.Admin.BulkController.ValidateMedicineBulkUpload(System.Collections.Generic.List{Cubix.Models.MasterMedicineUpload})">
+            <summary>
+            This Method Validated the Upload bulk Medicine entries 
+            Pass List of MasterMedicineUpload as Parameter
+            </summary>
+            
+        </member>
+        <member name="M:Cubix.Controllers.Admin.BulkController.SaveDrugBulkUpload(System.Collections.Generic.List{Cubix.Models.MasterMedicine})">
+            <summary>
+            This Method Save the Upload bulk Drug entries 
+            Pass List of MasterDrug as Parameter
+            </summary>
+            
+        </member>
+        <member name="M:Cubix.Controllers.Admin.BulkController.ValidateCompanyBulkUpload(System.Collections.Generic.List{Cubix.Models.CompanyRegUpload})">
+            <summary>
+            This Method Validated the Upload bulk Company entries 
+            Pass List of CompanyRegUpload as Parameter
+            </summary>
+            
+        </member>
+        <member name="M:Cubix.Controllers.Admin.BulkController.SaveCompanyBulkUpload(System.Collections.Generic.List{Cubix.Models.CompanyReg})">
+            <summary>
+            This Method Save the Upload bulk hospital entries 
+            Pass List of HospitalReg as Parameter
+            </summary>
+            
+        </member>
+        <member name="T:Cubix.Controllers.Admin.CompanyController">
+            <summary>
+            This class used for Get, insert,  update, delete the Company
+            Only Authorised User can access the mehtods of this Api Controller
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.CompanyController.#ctor(Cubix.BAL.Interfaces.ICompany)">
+            <summary>
+            Company Controller Comstructor
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.CompanyController.GetAll(Cubix.Models.SearchModel)">
+            <summary>
+            This Method Get the Company List by Search
+            Pass SearchModel as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.CompanyController.Get(System.Int32)">
+            <summary>
+            This Method Get the Company Record by Passing Company Id
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.CompanyController.Post(Cubix.Models.CompanyReg)">
+            <summary>
+            This Method used to Insert the Company record
+            Pass CompanyReg as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.CompanyController.Put(Cubix.Models.CompanyReg)">
+            <summary>
+            This Method used to Update the Company record
+            Pass CompanyReg as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.CompanyController.Delete(System.Int32)">
+            <summary>
+            This Method Delete the Company Record by Passing Company Id
+            </summary>
+        </member>
+        <member name="T:Cubix.Controllers.Admin.DepartmentController">
+            <summary>
+            This class used for Get, insert,  update, delete the Department
+            Only Authorised User can access the mehtods of this Api Controller
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.DepartmentController.#ctor(Cubix.BAL.Interfaces.IDepartment)">
+            <summary>
+            Department Controller Comstructor
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.DepartmentController.GetAll(Cubix.Models.SearchModel)">
+            <summary>
+            This Method Get the Department List by Search
+            Pass SearchModel as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.DepartmentController.Get(System.Int32)">
+            <summary>
+            This Method Get the Department Record by Passing Department Id
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.DepartmentController.Post(Cubix.Models.DepartmentReg)">
+            <summary>
+            This Method used to Insert the Department record
+            Pass DepartmentReg as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.DepartmentController.Put(Cubix.Models.DepartmentReg)">
+            <summary>
+            This Method used to Update the Department record
+            Pass DepartmentReg as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.DepartmentController.Delete(System.Int32)">
+            <summary>
+            This Method Delete the Department Record by Passing Department Id
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.DepartmentController.GetSlots(Cubix.Models.DepartmentSlotRequest)">
+            <summary>
+            This Method used to Get Department Slots DayWise
+            Pass DepartmentSlotRequest as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.DepartmentController.InsertSlots(System.Collections.Generic.List{Cubix.Models.MasterDepartmentSlotTime})">
+            <summary>
+            This Method used to Insert Department Slots DayWise
+            Pass DepartmentSlotRequest as Parameter
+            </summary>
+        </member>
+        <member name="T:Cubix.Controllers.Admin.DoctorController">
+            <summary>
+            This class used for Get, insert,  update, delete the Doctor
+            Only Authorised User can access the mehtods of this Api Controller
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.DoctorController.#ctor(Cubix.BAL.Interfaces.IDoctor,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            Doctor Controller Comstructor
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.DoctorController.GetAll(Cubix.Models.SearchModel)">
+            <summary>
+            This Method Get the Doctor List by Search
+            Pass SearchModel as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.DoctorController.Get(System.Int32)">
+            <summary>
+            This Method Get the Doctor Record by Passing Doctor Id
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.DoctorController.Post(Cubix.Models.DoctorReg)">
+            <summary>
+            This Method used to Insert the Doctor record
+            Pass DoctorReg as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.DoctorController.Put(Cubix.Models.DoctorReg)">
+            <summary>
+            This Method used to Update the Doctor record
+            Pass DoctorReg as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.DoctorController.Delete(System.Int32)">
+            <summary>
+            This Method Delete the Doctor Record by Passing Doctor Id
+            </summary>
+        </member>
+        <member name="T:Cubix.Controllers.Admin.DrugMasterController">
+            <summary>
+            This class used for Get, insert,  update, delete the DrugMaster
+            Only Authorised User can access the mehtods of this Api Controller
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.DrugMasterController.#ctor(Cubix.BAL.Interfaces.IDrugMaster)">
+            <summary>
+            DrugMaster Controller Comstructor
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.DrugMasterController.GetAll(Cubix.Models.SearchModel)">
+            <summary>
+            This Method Get the DrugMaster List by Search
+            Pass SearchModel as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.DrugMasterController.Get(System.Int32)">
+            <summary>
+            This Method Get the DrugMaster Record by Passing DrugId
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.DrugMasterController.Post(Cubix.Models.MasterDrug)">
+            <summary>
+            This Method used to Insert the DrugMaster record
+            Pass MasterDrug as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.DrugMasterController.Put(Cubix.Models.MasterDrug)">
+            <summary>
+            This Method used to Update the DrugMaster record
+            Pass MasterDrug as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.DrugMasterController.Delete(System.Int32)">
+            <summary>
+            This Method Delete the DrugMaster Record by Passing DrugId
+            </summary>
+        </member>
+        <member name="T:Cubix.Controllers.Admin.DrugTypeController">
+            <summary>
+            This class used for Get, insert,  update, delete the DrugType
+            Only Authorised User can access the mehtods of this Api Controller
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.DrugTypeController.#ctor(Cubix.BAL.Interfaces.IDrugType)">
+            <summary>
+            DrugType Controller Comstructor
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.DrugTypeController.GetAll(Cubix.Models.SearchModel)">
+            <summary>
+            This Method Get the DrugType List by Search
+            Pass SearchModel as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.DrugTypeController.Get(System.Int32)">
+            <summary>
+            This Method Get the DrugType Record by Passing DrugTypeId
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.DrugTypeController.Post(Cubix.Models.DrugType)">
+            <summary>
+            This Method used to Insert the DrugType record
+            Pass DrugType as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.DrugTypeController.Put(Cubix.Models.DrugType)">
+            <summary>
+            This Method used to Update the DrugType record
+            Pass DrugType as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.DrugTypeController.Delete(System.Int32)">
+            <summary>
+            This Method Delete the DrugType Record by Passing DrugTypeId
+            </summary>
+        </member>
+        <member name="T:Cubix.Controllers.Admin.HospitalController">
+            <summary>
+            This class used for Get, insert,  update, delete the Hospital
+            Only Authorised User can access the mehtods of this Api Controller
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.HospitalController.#ctor(Cubix.BAL.Interfaces.IHospital)">
+            <summary>
+            Hospital Controller Comstructor
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.HospitalController.GetAll(Cubix.Models.SearchModel)">
+            <summary>
+            This Method Get the Hospital List by Search
+            Pass SearchModel as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.HospitalController.Get(System.Int32)">
+            <summary>
+            This Method Get the Hospital Record by Passing Hospital Id
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.HospitalController.Post(Cubix.Models.HospitalReg)">
+            <summary>
+            This Method used to Insert the Hospital record
+            Pass HospitalReg as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.HospitalController.Put(Cubix.Models.HospitalReg)">
+            <summary>
+            This Method used to Update the Hospital record
+            Pass HospitalReg as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.HospitalController.Delete(System.Int32)">
+            <summary>
+            This Method Delete the Hospital Record by Passing Hospital Id
+            </summary>
+        </member>
+        <member name="T:Cubix.Controllers.Admin.MasterDosevalueController">
+            <summary>
+            This class used for Get, insert,  update, delete the MasterDosevalue
+            Only Authorised User can access the mehtods of this Api Controller
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.MasterDosevalueController.#ctor(Cubix.BAL.Interfaces.IMasterDosevalue)">
+            <summary>
+            MasterDosevalue Controller Comstructor
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.MasterDosevalueController.GetAll(Cubix.Models.SearchModel)">
+            <summary>
+            This Method Get the MasterDosevalue List by Search
+            Pass SearchModel as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.MasterDosevalueController.Get(System.Int32)">
+            <summary>
+            This Method Get the MasterDosevalue Record by Passing DrugId
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.MasterDosevalueController.Post(Cubix.Models.MasterDosevalue)">
+            <summary>
+            This Method used to Insert the MasterDosevalue record
+            Pass MasterDosevalue as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.MasterDosevalueController.Put(Cubix.Models.MasterDosevalue)">
+            <summary>
+            This Method used to Update the MasterDosevalue record
+            Pass MasterDosevalue as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.MasterDosevalueController.Delete(System.Int32)">
+            <summary>
+            This Method Delete the MasterDosevalue Record by Passing DrugId
+            </summary>
+        </member>
+        <member name="T:Cubix.Controllers.Admin.MedicineMasterController">
+            <summary>
+            This class used for Get, insert,  update, delete the MedicineMaster
+            Only Authorised User can access the mehtods of this Api Controller
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.MedicineMasterController.#ctor(Cubix.BAL.Interfaces.IMedicineMaster)">
+            <summary>
+            MedicineMaster Controller Comstructor
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.MedicineMasterController.GetAll(Cubix.Models.SearchModel)">
+            <summary>
+            This Method Get the MedicineMaster List by Search
+            Pass SearchModel as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.MedicineMasterController.Get(System.Int32)">
+            <summary>
+            This Method Get the MedicineMaster Record by Passing MedicineMaster Id
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.MedicineMasterController.Post(Cubix.Models.MasterMedicine)">
+            <summary>
+            This Method used to Insert the MedicineMaster record
+            Pass MasterMedicine as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.MedicineMasterController.Put(Cubix.Models.MasterMedicine)">
+            <summary>
+            This Method used to Update the MedicineMaster record
+            Pass MasterMedicine as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.MedicineMasterController.Delete(System.Int32)">
+            <summary>
+            This Method Delete the MedicineMaster Record by Passing MedicineMaster Id
+            </summary>
+        </member>
+        <member name="T:Cubix.Controllers.Admin.MRController">
+            <summary>
+            This class used for Get, insert,  update, delete the MR
+            Only Authorised User can access the mehtods of this Api Controller
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.MRController.#ctor(Cubix.BAL.Interfaces.IMR,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            MR Controller Comstructor
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.MRController.GetAll(Cubix.Models.SearchModel)">
+            <summary>
+            This Method Get the MR List by Search
+            Pass SearchModel as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.MRController.Get(System.Int32)">
+            <summary>
+            This Method Get the MR Record by Passing MR Id
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.MRController.Post(Cubix.Models.MRReg)">
+            <summary>
+            This Method used to Insert the MR record
+            Pass MRReg as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.MRController.Put(Cubix.Models.MRReg)">
+            <summary>
+            This Method used to Update the MR record
+            Pass MRReg as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.MRController.Delete(System.Int32)">
+            <summary>
+            This Method Delete the MR Record by Passing MR Id
+            </summary>
+        </member>
+        <member name="T:Cubix.Controllers.Admin.SlotMasterController">
+            <summary>
+            This class used for Get, insert,  update, delete the SlotTimeMaster
+            Only Authorised User can access the mehtods of this Api Controller
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.SlotMasterController.#ctor(Cubix.BAL.Interfaces.ISlotTimeMaster)">
+            <summary>
+            SlotTimeMaster Controller Comstructor
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.SlotMasterController.GetAll">
+            <summary>
+            This Method Get the SlotTimeMaster List 
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.SlotMasterController.Get(System.Int32)">
+            <summary>
+            This Method Get the SlotTimeMaster Record by Passing MasterSlotId
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.SlotMasterController.Post(Cubix.Models.MasterSlots)">
+            <summary>
+            This Method used to Insert the SlotTimeMaster record
+            Pass MasterSlots as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.SlotMasterController.Put(Cubix.Models.MasterSlots)">
+            <summary>
+            This Method used to Update the SlotTimeMaster record
+            Pass MasterSlots as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.SlotMasterController.Delete(System.Int32)">
+            <summary>
+            This Method Delete the SlotTimeMaster Record by Passing MasterSlotId
+            </summary>
+        </member>
+        <member name="T:Cubix.Controllers.Admin.SpecialityMasterController">
+            <summary>
+            This class used for Get, insert,  update, delete the SpecialityMaster
+            Only Authorised User can access the mehtods of this Api Controller
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.SpecialityMasterController.#ctor(Cubix.BAL.Interfaces.ISpecialityMaster)">
+            <summary>
+            SpecialityMaster Controller Comstructor
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.SpecialityMasterController.GetAll(Cubix.Models.SearchModel)">
+            <summary>
+            This Method Get the SpecialityMaster List by Search
+            Pass SearchModel as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.SpecialityMasterController.Get(System.Int32)">
+            <summary>
+            This Method Get the SpecialityMaster Record by Passing SpecialityMaster Id
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.SpecialityMasterController.Post(Cubix.Models.MasterSpecialityData)">
+            <summary>
+            This Method used to Insert the SpecialityMaster record
+            Pass MasterSpecialityData as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.SpecialityMasterController.Put(Cubix.Models.MasterSpecialityData)">
+            <summary>
+            This Method used to Update the SpecialityMaster record
+            Pass MasterSpecialityData as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.SpecialityMasterController.Delete(System.Int32)">
+            <summary>
+            This Method Delete the SpecialityMaster Record by Passing SpecialityMaster Id
+            </summary>
+        </member>
+        <member name="T:Cubix.Controllers.Admin.AdminUsersController">
+            <summary>
+            This class used for Get, insert,  update, delete the Doctor
+            Only Authorised User can access the mehtods of this Api Controller
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.AdminUsersController.#ctor(Cubix.BAL.Interfaces.SuperAdmin.IAdminUsers,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            Doctor Controller Comstructor
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.AdminUsersController.GetAll(Cubix.Models.SearchModel)">
+            <summary>
+            This Method Get the Admin List by Search
+            Pass SearchModel as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.AdminUsersController.Get(System.Int32)">
+            <summary>
+            This Method Get the Admin Record by Passing Admin Id
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.AdminUsersController.Post(Cubix.Models.AdminReg)">
+            <summary>
+            This Method used to Insert the Admin record
+            Pass AdminReg as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.AdminUsersController.Put(Cubix.Models.AdminReg)">
+            <summary>
+            This Method used to Update the Admin record
+            Pass AdminReg as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Admin.AdminUsersController.Delete(System.Int32)">
+            <summary>
+            This Method Delete the Admin Record by Passing Doctor Id
+            </summary>
+        </member>
+        <member name="T:Cubix.Controllers.AuthController">
+            <summary>
+            This API used for Authenticate the Admin, Doctor, Patient
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.AuthController.#ctor(Cubix.BAL.Interfaces.IAuth,Microsoft.Extensions.Caching.Distributed.IDistributedCache,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Cubix.BAL.Interfaces.ICommon)">
+            <summary>
+            Auth Controller Comstructor
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.AuthController.CheckAPI(System.String)">
+            <summary>
+            This method used for check the API response
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.AuthController.CheckSuperUserExists(Cubix.Models.LoginModel)">
+            <summary>
+            This Method Verify the User Existance by Passing Mobile Number
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.AuthController.AuthenticateSuperAdmin(Cubix.Models.LoginModel)">
+            <summary>
+            This Method Verify the Admin Login
+            Also, It check the Captcha for Secuirty
+            After Successfull Login rturn the Admin Details along eith encrypted JWT token
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.AuthController.CheckUserExists(Cubix.Models.LoginModel)">
+            <summary>
+            This Method Verify the User Existance by Passing Mobile Number
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.AuthController.AuthenticateAdmin(Cubix.Models.LoginModel)">
+            <summary>
+            This Method Verify the Admin Login
+            Also, It check the Captcha for Secuirty
+            After Successfull Login rturn the Admin Details along eith encrypted JWT token
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.AuthController.CheckDoctorExists(Cubix.Models.LoginModel)">
+            <summary>
+            This Method Verify the User Existance by Passing Mobile Number
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.AuthController.AuthenticateDoctor(Cubix.Models.LoginModel)">
+            <summary>
+            This Method Verify the Admin Login
+            Also, It check the Captcha for Secuirty
+            After Successfull Login rturn the Admin Details along eith encrypted JWT token
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.AuthController.CheckMRExists(Cubix.Models.LoginModel)">
+            <summary>
+            This Method Verify the User Existance by Passing Mobile Number
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.AuthController.AuthenticateMR(Cubix.Models.LoginModel)">
+            <summary>
+            This Method Verify the Admin Login
+            Also, It check the Captcha for Secuirty
+            After Successfull Login rturn the Admin Details along eith encrypted JWT token
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.AuthController.patientlogin(Cubix.Models.PatientLoginModel)">
+            <summary>
+            This Method Verify the patient tele-consultation appointment
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.AuthController.PatientRegistrationOTP(Cubix.Models.PatientLoginModel)">
+            <summary>
+            This Method Verify the User Existance by Passing Mobile Number
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.AuthController.CheckPatientExists(Cubix.Models.PatientLoginModel)">
+            <summary>
+            This Method Verify the Patient registration OTP and return PatientReg if user exists otherwise empty PatientReg  
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.AuthController.NewPatientRegistration(Cubix.Models.SuperPatientRegistrationModel)">
+            <summary>
+            This Method Create the New Patient registration  
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.AuthController.ReVisitPatientRegistration(Cubix.Models.SuperPatientRegistrationModel)">
+            <summary>
+            This Method Create the Re-Visit Patient registration  
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.AuthController.GetDoctorSlots(Cubix.Models.DoctorSlotRequest)">
+            <summary>
+            This Method Get the Doctor Slots 
+            Pass DoctorSlotRequest(Slot Date and Doctor Id) as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.AuthController.CheckPatientProfile(Cubix.Models.PatientLoginModel)">
+            <summary>
+            This Method Verify the User Existance by Passing Mobile Number for Profile Login
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.AuthController.AuthenticatePatientProfile(Cubix.Models.PatientLoginModel)">
+            <summary>
+            This Method Verify the Patient Profile Login
+            After Successfull Login rturn the Patient Details along eith encrypted JWT token
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.AuthController.GetActiveHospitals">
+            <summary>
+            This method used for Get the Active Hospitals
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.AuthController.GetActiveBranchByHospital(System.Int64)">
+            <summary>
+            This method used for Get the Active Branch By Passing Hospital Id
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.AuthController.GetActiveDepartmentByBranch(System.Int64)">
+            <summary>
+            This method used for Get the Active Department By Passing BranchId Id
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.AuthController.GetActiveDoctorByDepartment(System.Int64)">
+            <summary>
+            This method used for Get the Active Doctor By Passing Department Id
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.AuthController.DiscardConsultaion(Cubix.Models.RefundRequest)">
+            <summary>
+            This Method used to discard unpaid conultation
+            Pass SearchModel as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.AuthController.GetLandingCount">
+            <summary>
+            This Method used to get landing page count
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.AuthController.CheckPath">
+            <summary>
+            This Method used to get landing page count
+            </summary>
+        </member>
+        <member name="T:Cubix.Controllers.BaseController">
+            <summary>
+            Base Controller used for Get the current token values from context header 
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.BaseController.FileUpload(System.String,System.String,System.String,System.String,System.String,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            This method used to upload the documents after converting from base64  to server and return the path
+            </summary>
+        </member>
+        <member name="P:Cubix.Controllers.BaseController.Me">
+            <summary>
+            Return the Current User Data from Reading the JWT Token
+            </summary>
+        </member>
+        <member name="T:Cubix.Controllers.CommonController">
+            <summary>
+            This API Controller  used for fetch the master tables data , common for All Users
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.CommonController.#ctor(Cubix.BAL.Interfaces.ICommon,Microsoft.Extensions.Caching.Memory.IMemoryCache)">
+             <summary>
+            Comstructor
+             </summary>
+        </member>
+        <member name="M:Cubix.Controllers.CommonController.GetState">
+            <summary>
+            This method used for Get the States
+            Store them in memory because this is static data
+            </summary>
+            <returns>MasterState Model</returns>
+        </member>
+        <member name="M:Cubix.Controllers.CommonController.GetDistricts(System.Int64)">
+            <summary>
+            This method used for Get the Districts by Passing State Id
+            Store them in memory because this is static data
+            </summary>
+            <returns>MasterDistrict Model</returns>
+        </member>
+        <member name="M:Cubix.Controllers.CommonController.GetCity(System.Int64)">
+            <summary>
+            This method used for Get the Cities by Passing District Id
+            Store them in memory because this is static data
+            </summary>
+            <returns>MasterCity Model</returns>
+        </member>
+        <member name="M:Cubix.Controllers.CommonController.GetMasterMaritalStatus">
+            <summary>
+            This method used for Get the Marital Status
+            Store them in memory because this is static data
+            <returns>MasterMaritalData Model</returns>
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.CommonController.GetActiveHospitals">
+            <summary>
+            This method used for Get the Active Hospitals
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.CommonController.GetActiveBranchByHospital(System.Int64)">
+            <summary>
+            This method used for Get the Active Branch By Passing Hospital Id
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.CommonController.GetActiveDepartmentByBranch(System.Int64)">
+            <summary>
+            This method used for Get the Active Department By Passing BranchId Id
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.CommonController.GetActiveDoctorByDepartment(System.Int64)">
+            <summary>
+            This method used for Get the Active Doctor By Passing Department Id
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.CommonController.GetActiveSpeciality">
+            <summary>
+            This method used for Get the Active Speciality
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.CommonController.GetActiveSpecialityByDoctor">
+            <summary>
+            This method used for Get the Active Speciality
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.CommonController.GetAMasterDays">
+            <summary>
+            This method used for Get the master days
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.CommonController.GetDrugMaster">
+            <summary>
+            This method used for Get the master drug
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.CommonController.GetActiveCompanyMaster">
+            <summary>
+            This method used for Get the master companny
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.CommonController.GetActiveDrugType">
+            <summary>
+            This method used for Get the Drug Type
+            </summary>
+        </member>
+        <member name="T:Cubix.Controllers.ConnectionController">
+            <summary>
+            Connection Controller used for Chat and PING user to user HUB connection
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.ConnectionController.#ctor(Microsoft.AspNetCore.SignalR.IHubContext{Cubix.ChatHub},Microsoft.Extensions.Caching.Distributed.IDistributedCache)">
+            <summary>
+            Constructor 
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.ConnectionController.GetConnection(System.String)">
+            <summary>
+            Get ConnectionId By Passing UserId
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.ConnectionController.SendMessageByDoctor(System.String,System.String,System.String)">
+            <summary>
+            Send Message
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.ConnectionController.SendMessageByPatient(System.String,System.String,System.String)">
+            <summary>
+            Send Message
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.ConnectionController.TestConnection(System.String)">
+            <summary>
+            Get ConnectionId By Passing UserId
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.ConnectionController.CallInitiated(System.String,System.String,System.String,System.String)">
+            <summary>
+            Call Initiated
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.ConnectionController.MRCallInitiated(System.String,System.String,System.String,System.String)">
+            <summary>
+            MR Call Initiated
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.ConnectionController.CallDenied(System.String,System.String,System.String)">
+            <summary>
+            Call Initiated
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.ConnectionController.MRCallAccepted(System.String,System.String,System.String)">
+            <summary>
+            MR Call Accepted
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.ConnectionController.CallAccepted(System.String,System.String,System.String)">
+            <summary>
+            Call Accepted
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.ConnectionController.GetVCToken(System.String)">
+            <summary>
+            getVCtoken
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.ConnectionController.LeaveByDoctor(System.String,System.String,System.String)">
+            <summary>
+            Doctor Left
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.ConnectionController.ConsultationComplete(System.String,System.String,System.String)">
+            <summary>
+            Consultation Complete
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.ConnectionController.MRConsultationComplete(System.String,System.String,System.String)">
+            <summary>
+            Consultation Complete
+            </summary>
+        </member>
+        <member name="T:Cubix.Controllers.Doctor.DoctorConsultationsController">
+            <summary>
+            This class used for Get and update the Doctor Profile
+            Only Authorised User can access the mehtods of this Api Controller
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Doctor.DoctorConsultationsController.#ctor(Cubix.BAL.Interfaces.Doctor.IDoctorConsultations,Cubix.BAL.Interfaces.ICommon)">
+            <summary>
+            Doctor Profile Controller Comstructor
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Doctor.DoctorConsultationsController.GetTodayAppointments(Cubix.Models.SearchModel)">
+            <summary>
+            This Method Get the Today Consultations List by Search
+            Pass SearchModel as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Doctor.DoctorConsultationsController.GetPastConsultations(Cubix.Models.SearchModel)">
+            <summary>
+            This Method Get the Past Consultations List by Search
+            Pass SearchModel as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Doctor.DoctorConsultationsController.GetMRTodayAppointments(Cubix.Models.SearchModel)">
+            <summary>
+            This Method Get the Today Consultations for MR List by Search
+            Pass SearchModel as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Doctor.DoctorConsultationsController.GetMRPastConsultations(Cubix.Models.SearchModel)">
+            <summary>
+            This Method Get the MR Past Consultations List by Search
+            Pass SearchModel as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Doctor.DoctorConsultationsController.GetPatientProfile(System.Int64)">
+            <summary>
+            This method used for Get the Patient Profile
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Doctor.DoctorConsultationsController.RefundResponse(Cubix.Models.RefundRequest)">
+            <summary>
+            This Method used to refund reponse
+            Pass SearchModel as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Doctor.DoctorConsultationsController.GetConsultationPatientDetail(System.Int64)">
+            <summary>
+            This Method used to get patient consultation detail
+            Pass ConsultationId
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Doctor.DoctorConsultationsController.GetCompleteConsultation(System.Int64)">
+            <summary>
+            This Method used to get patient consultation completeconsultation
+            Pass ConsultationId
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Cubix.Controllers.Doctor.DoctorConsultationsController.InsertConsultationResponse(Cubix.Models.SuperPatientTeleConsultation)" -->
+        <!-- Badly formed XML comment ignored for member "M:Cubix.Controllers.Doctor.DoctorConsultationsController.InsertMRConsultationResponse(Cubix.Models.MRResponseTeleConsultationReg)" -->
+        <member name="M:Cubix.Controllers.Doctor.DoctorConsultationsController.GetDrugType">
+            <summary>
+            This method used for Get the grug type
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Doctor.DoctorConsultationsController.GetMedicineMaster">
+            <summary>
+            This method used for Get the grug type
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Doctor.DoctorConsultationsController.GetMasterDosevalue">
+            <summary>
+            This method used for Get the grug type
+            </summary>
+        </member>
+        <member name="T:Cubix.Controllers.Doctor.DoctorProfileController">
+            <summary>
+            This class used for Get and update the Doctor Profile
+            Only Authorised User can access the mehtods of this Api Controller
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Doctor.DoctorProfileController.#ctor(Cubix.BAL.Interfaces.Doctor.IDoctorProfile,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.Extensions.Caching.Distributed.IDistributedCache)">
+            <summary>
+            Doctor Profile Controller Comstructor
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Doctor.DoctorProfileController.GetProfile">
+            <summary>
+            This method used for Get the Profile
+            </summary>
+            <returns>Doctor Model</returns>
+        </member>
+        <member name="M:Cubix.Controllers.Doctor.DoctorProfileController.UpdateProfile(Cubix.Models.DoctorReg)">
+            <summary>
+            This method used for Update the Profile
+            </summary>
+            <returns>ResultModel with int as Model</returns>
+            
+        </member>
+        <member name="M:Cubix.Controllers.Doctor.DoctorProfileController.UpdateProfileImage(Cubix.Models.FileUpload)">
+            <summary>
+            This method used for Update the Image Profile
+            </summary>
+            <returns>ResultModel with int as Model</returns>
+            
+        </member>
+        <member name="M:Cubix.Controllers.Doctor.DoctorProfileController.GetSlots(Cubix.Models.DoctorSlotRequest)">
+            <summary>
+            This Method used to Get Doctor Slots DayWise
+            Pass DoctorSlotRequest as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Doctor.DoctorProfileController.InsertSlots(System.Collections.Generic.List{Cubix.Models.DoctorSlotTime})">
+            <summary>
+            This Method used to Insert Doctor Slots DayWise
+            Pass DoctorSlotRequest as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Doctor.DoctorProfileController.Logout">
+            <summary>
+            This Method used to Logout
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Doctor.DoctorProfileController.GetDashBoardCounters">
+            <summary>
+            This method used for Get the Dashboard Counters
+            </summary>
+            <returns>Doctor Model</returns>
+        </member>
+        <member name="T:Cubix.Controllers.MR.MRProfileController">
+            <summary>
+            This class used for Get and update the MR Profile
+            Only Authorised User can access the mehtods of this Api Controller
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.MR.MRProfileController.#ctor(Cubix.BAL.Interfaces.MR.IMRProfile,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.Extensions.Caching.Distributed.IDistributedCache,Cubix.BAL.Interfaces.IAuth)">
+            <summary>
+            MR Profile Controller Comstructor
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.MR.MRProfileController.GetProfile">
+            <summary>
+            This method used for Get the Profile
+            </summary>
+            <returns>MR Model</returns>
+        </member>
+        <member name="M:Cubix.Controllers.MR.MRProfileController.UpdateProfile(Cubix.Models.MRReg)">
+            <summary>
+            This method used for Update the Profile
+            </summary>
+            <returns>ResultModel with int as Model</returns>
+            
+        </member>
+        <member name="M:Cubix.Controllers.MR.MRProfileController.UpdateProfileImage(Cubix.Models.FileUpload)">
+            <summary>
+            This method used for Update the Image Profile
+            </summary>
+            <returns>ResultModel with int as Model</returns>
+            
+        </member>
+        <member name="M:Cubix.Controllers.MR.MRProfileController.GetMRSlots(Cubix.Models.DoctorSlotRequest)">
+            <summary>
+            This Method Get the Doctor Slots 
+            Pass DoctorSlotRequest(Slot Date and Doctor Id) as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.MR.MRProfileController.InsertMRTeleConsultationReg(Cubix.Models.MRTeleConsultationReg)">
+            <summary>
+            This Method Get the Doctor Slots 
+            Pass DoctorSlotRequest(Slot Date and Doctor Id) as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.MR.MRProfileController.GetTodayAppointments(Cubix.Models.SearchModel)">
+            <summary>
+            This Method Get the Today Consultations List by Search
+            Pass SearchModel as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.MR.MRProfileController.GetPastConsultations(Cubix.Models.SearchModel)">
+            <summary>
+            This Method Get the Past Consultations List by Search
+            Pass SearchModel as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.MR.MRProfileController.Logout">
+            <summary>
+            This Method used to Logout
+            </summary>
+        </member>
+        <member name="T:Cubix.Controllers.Patient.PatientConsultationsController">
+            <summary>
+            This class used for Get and update the Patient Profile
+            Only Authorised User can access the mehtods of this Api Controller
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Patient.PatientConsultationsController.#ctor(Cubix.BAL.Interfaces.Patient.IPatientConsultations,Cubix.BAL.Interfaces.ICommon,Microsoft.Extensions.Caching.Distributed.IDistributedCache,Cubix.BAL.Interfaces.IAuth)">
+            <summary>
+            Patient Profile Controller Comstructor
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Patient.PatientConsultationsController.GetTodayAppointments(Cubix.Models.SearchModel)">
+            <summary>
+            This Method Get the Today Consultations List by Search
+            Pass SearchModel as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Patient.PatientConsultationsController.GetPastConsultations(Cubix.Models.SearchModel)">
+            <summary>
+            This Method Get the Past Consultations List by Search
+            Pass SearchModel as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Patient.PatientConsultationsController.patientlogin(Cubix.Models.PatientLoginModel)">
+            <summary>
+            This Method Verify the patient tele-consultation appointment
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Patient.PatientConsultationsController.RefundRequest(Cubix.Models.RefundRequest)">
+            <summary>
+            This Method used to refund request
+            Pass SearchModel as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Patient.PatientConsultationsController.GetConsultationPatientDetail(System.Int64)">
+            <summary>
+            This Method used to get patient consultation detail
+            Pass ConsultationId
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Patient.PatientConsultationsController.GetCompleteConsultation(System.Int64)">
+            <summary>
+            This Method used to get patient consultation completeconsultation
+            Pass ConsultationId
+            </summary>
+        </member>
+        <member name="T:Cubix.Controllers.Patient.PatientProfileController">
+            <summary>
+            This class used for Get and update the Patient Profile
+            Only Authorised User can access the mehtods of this Api Controller
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Patient.PatientProfileController.#ctor(Cubix.BAL.Interfaces.Patient.IPatientProfile,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.Extensions.Caching.Distributed.IDistributedCache)">
+            <summary>
+            Patient Profile Controller Comstructor
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Patient.PatientProfileController.GetProfile">
+            <summary>
+            This method used for Get the Profile
+            </summary>
+            <returns>Patient Model</returns>
+        </member>
+        <member name="M:Cubix.Controllers.Patient.PatientProfileController.UpdateProfile(Cubix.Models.PatientReg)">
+            <summary>
+            This method used for Update the Profile
+            </summary>
+            <returns>ResultModel with int as Model</returns>
+            
+        </member>
+        <member name="M:Cubix.Controllers.Patient.PatientProfileController.UpdateProfileImage(Cubix.Models.FileUpload)">
+            <summary>
+            This method used for Update the Image Profile
+            </summary>
+            <returns>ResultModel with int as Model</returns>
+            
+        </member>
+        <member name="M:Cubix.Controllers.Patient.PatientProfileController.Logout">
+            <summary>
+            This Method used to Logout
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Patient.PatientProfileController.GetDashBoardCounters">
+            <summary>
+            This method used for Get the Dashboard Counters
+            </summary>
+            <returns>Doctor Model</returns>
+        </member>
+        <member name="T:Cubix.Controllers.Patient.ReportsController">
+            <summary>
+            This class used for Reports
+            Only Authorised User can access the mehtods of this Api Controller
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Patient.ReportsController.#ctor(Cubix.BAL.Interfaces.Reports.IReports,Microsoft.Extensions.Caching.Distributed.IDistributedCache,Cubix.BAL.Interfaces.IAuth)">
+            <summary>
+            Admin Reports Controller Comstructor
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Patient.ReportsController.GetMRAppointmentSummary(Cubix.Models.ReportSearchModel)">
+            <summary>
+            This Method Get the MR Summary Report
+            Pass SearchModel as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Patient.ReportsController.GetPatientAppointmentSummary(Cubix.Models.ReportSearchModel)">
+            <summary>
+            This Method Get the Patient Summary Report
+            Pass SearchModel as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Patient.ReportsController.GetMRAppointmentDetailByAdmin(Cubix.Models.ReportSearchModel)">
+            <summary>
+            This Method Get the MR Appointment Detail by Admin
+            Pass SearchModel as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Patient.ReportsController.GetPatientAppointmentDetailByAdmin(Cubix.Models.ReportSearchModel)">
+            <summary>
+            This Method Get the Patient Appointment Detail by Admin
+            Pass SearchModel as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Patient.ReportsController.GetMRAppointmentDetailByDoctor(Cubix.Models.ReportSearchModel)">
+            <summary>
+            This Method Get the MR Appointment Detail by Doctor
+            Pass SearchModel as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.Patient.ReportsController.GetPatientAppointmentDetailByDoctor(Cubix.Models.ReportSearchModel)">
+            <summary>
+            This Method Get the Patient Appointment Detail by Doctor
+            Pass SearchModel as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.ResponseController.#ctor(Cubix.BAL.Interfaces.IAuth,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            Auth Controller Comstructor
+            </summary>
+        </member>
+        <member name="T:Cubix.Controllers.SuperAdmin.SuperAdminController">
+            <summary>
+            This class used for Get and update the SuperAdmin Profile
+            Only Authorised User can access the mehtods of this Api Controller
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.SuperAdmin.SuperAdminController.#ctor(Cubix.BAL.Interfaces.ISuperAdminProfile,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.Extensions.Caching.Distributed.IDistributedCache)">
+            <summary>
+            SuperAdmin Controller Comstructor
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.SuperAdmin.SuperAdminController.UpdateProfileImage(Cubix.Models.FileUpload)">
+            <summary>
+            This method used for Update the Image Profile
+            </summary>
+            <returns>ResultModel with int as Model</returns>
+            
+        </member>
+        <member name="M:Cubix.Controllers.SuperAdmin.SuperAdminController.Logout">
+            <summary>
+            This Method used to Logout
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.SuperAdmin.SuperAdminController.GetDashBoardCounters">
+            <summary>
+            This method used for Get the Dashboard Counters
+            </summary>
+            <returns>Doctor Model</returns>
+        </member>
+        <member name="T:Cubix.Filters.AdminTokenFilter">
+            <summary>
+            Implement the Middleware for check the Authorised Token
+            </summary>
+        </member>
+        <member name="M:Cubix.Filters.AdminTokenFilter.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            Resource Executing
+            </summary>
+        </member>
+        <member name="M:Cubix.Filters.AdminTokenFilter.OnActionExecuted(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext)">
+            <summary>
+            called after Resource Executed
+            </summary>
+        </member>
+        <member name="T:Cubix.Filters.DoctorTokenFilter">
+            <summary>
+            Implement the Middleware for check the Authorised Token
+            </summary>
+        </member>
+        <member name="M:Cubix.Filters.DoctorTokenFilter.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            Resource Executing
+            </summary>
+        </member>
+        <member name="M:Cubix.Filters.DoctorTokenFilter.OnActionExecuted(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext)">
+            <summary>
+            called after Resource Executed
+            </summary>
+        </member>
+        <member name="T:Cubix.Filters.HttpGlobalExceptionFilter">
+            <summary>
+            This Class used for check the Global Exception
+            </summary>
+        </member>
+        <member name="M:Cubix.Filters.HttpGlobalExceptionFilter.OnException(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)">
+            <summary>
+            This Method used for customize the global exception message
+            </summary>
+        </member>
+        <member name="T:Cubix.Filters.ValidateModelFilter">
+            <summary>
+            This Class used for check the Model validation as filter
+            </summary>
+        </member>
+        <member name="M:Cubix.Filters.ValidateModelFilter.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            Override the Method for return the custom message
+            Pass CompanyReg as Parameter
+            </summary>
+        </member>
+        <member name="M:Cubix.Filters.ValidationError.#ctor(System.String,System.String)">
+            <summary>
+            This Method used fo return the custom validation message
+            </summary>
+        </member>
+        <member name="T:Cubix.Filters.MRTokenFilter">
+            <summary>
+            Implement the Middleware for check the Authorised Token
+            </summary>
+        </member>
+        <member name="M:Cubix.Filters.MRTokenFilter.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            Resource Executing
+            </summary>
+        </member>
+        <member name="M:Cubix.Filters.MRTokenFilter.OnActionExecuted(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext)">
+            <summary>
+            called after Resource Executed
+            </summary>
+        </member>
+        <member name="T:Cubix.Filters.PatientProfileTokenFilter">
+            <summary>
+            Implement the Middleware for check the Authorised Token
+            </summary>
+        </member>
+        <member name="M:Cubix.Filters.PatientProfileTokenFilter.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            Resource Executing
+            </summary>
+        </member>
+        <member name="M:Cubix.Filters.PatientProfileTokenFilter.OnActionExecuted(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext)">
+            <summary>
+            called after Resource Executed
+            </summary>
+        </member>
+        <member name="T:Cubix.Filters.PatientTokenFilter">
+            <summary>
+            Implement the Middleware for check the Authorised Token
+            </summary>
+        </member>
+        <member name="M:Cubix.Filters.PatientTokenFilter.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            Resource Executing
+            </summary>
+        </member>
+        <member name="M:Cubix.Filters.PatientTokenFilter.OnActionExecuted(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext)">
+            <summary>
+            called after Resource Executed
+            </summary>
+        </member>
+        <member name="T:Cubix.Filters.SuperAdminTokenFilter">
+            <summary>
+            Implement the Middleware for check the Authorised Token
+            </summary>
+        </member>
+        <member name="M:Cubix.Filters.SuperAdminTokenFilter.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            Resource Executing
+            </summary>
+        </member>
+        <member name="M:Cubix.Filters.SuperAdminTokenFilter.OnActionExecuted(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext)">
+            <summary>
+            called after Resource Executed
+            </summary>
+        </member>
+        <member name="T:Cubix.ChatHub">
+            <summary>
+            Hub Class for Chat and making call signals from one user to another
+            </summary>
+        </member>
+        <member name="M:Cubix.ChatHub.#ctor(Microsoft.Extensions.Caching.Distributed.IDistributedCache)">
+            <summary>
+            Chat Hub Constructor
+            </summary>
+        </member>
+        <member name="M:Cubix.ChatHub.UserJoin(System.String,System.String)">
+            <summary>
+            Established Doctor Connection
+            </summary>
+        </member>
+        <member name="M:Cubix.ChatHub.OnConnectedAsync">
+            <summary>
+            Calls When connection established
+            </summary>       
+        </member>
+        <member name="M:Cubix.ChatHub.OnDisconnectedAsync(System.Exception)">
+            <summary>
+            Calls When connection disconnected
+            </summary>
+        </member>
+        <member name="T:Cubix.ServiceToScope">
+            <summary>
+             This class used to creates a Scoped service
+            </summary>
+        </member>
+        <member name="M:Cubix.ServiceToScope.AddToScope(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+             This method creates a Scoped service
+             A new instance of a Scoped service is created once per request within the scope
+            </summary>
+        </member>
+        <member name="T:Cubix.Startup">
+            <summary>
+            Start Up Class
+            </summary>
+        </member>
+        <member name="M:Cubix.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+             Start UP Constructor
+            </summary>
+        </member>
+        <member name="P:Cubix.Startup.Configuration">
+            <summary>
+             Represents a set of key/value application configuration properties.
+            </summary>
+        </member>
+        <member name="M:Cubix.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+        </member>
+        <member name="M:Cubix.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+        </member>
+        <member name="T:Cubix.SwaggerServiceExtensions">
+            <summary>
+            Swagger Extension
+            </summary>
+        </member>
+        <member name="M:Cubix.SwaggerServiceExtensions.AddSwaggerDocumentation(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Configure Swagger 
+            </summary>
+        </member>
+        <member name="M:Cubix.SwaggerServiceExtensions.UseSwaggerDocumentation(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            SetUp Swagger Configuration
+            </summary>
+        </member>
+    </members>
+</doc>

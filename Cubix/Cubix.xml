@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Cubix</name>
+    </assembly>
+    <members>
+        <member name="M:Cubix.Controllers.AuthController.Get">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.AuthController.Get(System.Int32)">
+            <summary>
+            This method is used to get the record
+            </summary>
+            <param name="id">pass id</param>
+            <returns>value</returns>
+        </member>
+        <member name="T:Cubix.Controllers.WeatherForecastController">
+            <summary>
+            This Controller used for Add, Delete ,Update and Fetch the Weather forecast record
+            </summary>
+        </member>
+        <member name="M:Cubix.Controllers.WeatherForecastController.Get">
+            <summary>
+            This method used for get the forecast
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Cubix.WeatherForecast">
+            <summary>WeatherForecast class used for capture the weather forecast</summary>
+        </member>
+        <member name="P:Cubix.WeatherForecast.Date">
+            <summary>Used for set or get the current forecast time</summary>
+        </member>
+        <member name="P:Cubix.WeatherForecast.TemperatureC">
+            <summary>Used for set or get the Temperature in C</summary>
+        </member>
+        <member name="P:Cubix.WeatherForecast.TemperatureF">
+            <summary>Used for set or get the Temperature in F</summary>
+        </member>
+        <member name="P:Cubix.WeatherForecast.Summary">
+            <summary>Used for set or get the Summary</summary>
+        </member>
+    </members>
+</doc>
